@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+html[data-theme="dark"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --border: #1f1f1f;
+  --secondary: #aaaaaa;
+  --control-bg: #050505;
+  --project-media: #060606;
+  --project-grid: rgba(255, 255, 255, 0.045);
+  --project-panel: rgba(0, 0, 0, 0.6);
+  --project-skeleton-strong: rgba(255, 255, 255, 0.2);
+  --project-skeleton: rgba(255, 255, 255, 0.1);
+  --project-skeleton-soft: rgba(255, 255, 255, 0.05);
+  --project-overlay: rgba(0, 0, 0, 0.2);
+  --github-accent: #ffffff;
+  --linkedin-accent: #0a66c2;
+}
+
+html[data-theme="light"] {
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --border: #dddddd;
+  --secondary: #666666;
+  --control-bg: #ffffff;
+  --project-media: #f4f4f5;
+  --project-grid: rgba(0, 0, 0, 0.055);
+  --project-panel: rgba(255, 255, 255, 0.72);
+  --project-skeleton-strong: rgba(0, 0, 0, 0.18);
+  --project-skeleton: rgba(0, 0, 0, 0.09);
+  --project-skeleton-soft: rgba(0, 0, 0, 0.05);
+  --project-overlay: rgba(255, 255, 255, 0.2);
+  --github-accent: #24292f;
+  --linkedin-accent: #0a66c2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-border: var(--border);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-karla);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  overflow-y: scroll;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-karla), Arial, Helvetica, sans-serif;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: theme-ripple 750ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  clip-path: circle(0 at var(--theme-x, 50%) var(--theme-y, 50%));
+}
+
+@keyframes theme-ripple {
+  to {
+    clip-path: circle(var(--theme-r, 150vmax) at var(--theme-x, 50%) var(--theme-y, 50%));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(root) {
+    animation: none;
+    clip-path: none;
+  }
 }
