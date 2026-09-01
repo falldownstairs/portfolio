@@ -139,7 +139,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-secondary transition-colors hover:text-[var(--github-accent)] focus-visible:text-[var(--github-accent)] focus-visible:outline-none"
+            className="text-secondary transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
           >
             <svg
               aria-hidden="true"
@@ -156,7 +156,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-secondary transition-colors hover:text-[var(--github-accent)] focus-visible:text-[var(--github-accent)] focus-visible:outline-none"
+            className="text-secondary transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
           >
             <svg
               aria-hidden="true"

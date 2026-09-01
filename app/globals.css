@@ -14,8 +14,6 @@ html[data-theme="dark"] {
   --project-skeleton: rgba(255, 255, 255, 0.1);
   --project-skeleton-soft: rgba(255, 255, 255, 0.05);
   --project-overlay: rgba(0, 0, 0, 0.2);
-  --github-accent: #ffffff;
-  --linkedin-accent: #0a66c2;
 }
 
 html[data-theme="light"] {
@@ -31,8 +29,6 @@ html[data-theme="light"] {
   --project-skeleton: rgba(0, 0, 0, 0.09);
   --project-skeleton-soft: rgba(0, 0, 0, 0.05);
   --project-overlay: rgba(255, 255, 255, 0.2);
-  --github-accent: #24292f;
-  --linkedin-accent: #0a66c2;
 }
 
 @theme inline {
