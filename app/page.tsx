@@ -180,7 +180,7 @@ export default function Home() {
             Columbia building{" "}
             <span className="font-medium text-foreground">full-stack applications</span>
             , <span className="font-medium text-foreground">mobile experiences</span>,
-            and <span className="font-medium text-foreground">hardware projects</span>.
+            and <span className="font-medium text-foreground">hardware/embedded projects</span>.
           </p>
         </section>
 
