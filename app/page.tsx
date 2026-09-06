@@ -25,6 +25,7 @@ const projects = [
     description:
       "A lightweight robot powered by a Raspberry Pi, giving LLMs access to real-world interactions.",
     href: "https://github.com/falldownstairs/quadruped-robot",
+    image: "/quadruped.png",
     info: "Project",
     accent: "bg-emerald-300/25",
   },
