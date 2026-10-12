@@ -136,7 +136,7 @@ export default function Home() {
       <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-6 py-8 md:px-16">
         <nav aria-label="Social links" className="flex items-center gap-6">
           <a
-            href="https://github.com/"
+            href="https://github.com/falldownstairs"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -153,7 +153,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/junericchen/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
